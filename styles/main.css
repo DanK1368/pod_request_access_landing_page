@@ -362,7 +362,7 @@ body {
 
 .container {
   background-color: rgba(18, 23, 37, 0.9);
-  background-image: url(assets/mobile/image-host.jpg);
+  background-image: url(/pod_request_access_landing_page/assets/mobile/image-host.jpg);
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
