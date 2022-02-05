@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+@use './reset';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $main-font;
+}
+
+.heading-1 {
+    font-size: $header1;
+    font-weight: 100;
+    text-align: center;
+    margin: 1rem;
+
+    @include md {
+        text-align: left;
+        font-size: 4.8em;
+        line-height: 1.2;
+    }
+}
+
+.main-text {
+    font-size: $main-text;
+    color: $body-text-color;
+    font-weight: 100;
+    text-align: center;
+    padding: 2.3rem;
+
+    @include md {
+        text-align: left;
+        padding: 0;
+        margin: 3rem 1rem;
+        width: 40ch;
+        line-height: 1.6;
+    }
+}
+
+
+h1,h2,h3 {
+    color: $header-text-color;
+}
+
+.primary-color {
+    color: $primary-color;
+}

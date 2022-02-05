@@ -1,0 +1,78 @@
+@use '../abstracts' as *;
+
+section {
+    grid-column: 1 / -1;
+    width: 95%;
+    margin: 0 auto;
+
+    @include xs {
+        min-height: 80vh;
+        padding-bottom: 2rem;
+    }
+
+    @include sm {
+        min-height: 100%;
+        padding-bottom: 0;
+    }
+
+    @include md {
+        grid-column: 1 / 11;
+        z-index: 2;
+    }
+
+    @include xl {
+        grid-column: 2 / 9;
+        grid-row: 3 / 4;
+        min-height: initial;
+        align-self: end;
+    }
+}
+
+article {
+    @include md {
+        background: $main-bg-color;
+        height: 50rem;
+
+        display: grid;
+        grid-template-areas: 
+        'text'
+        'form'
+        'icons';
+    }
+
+    @include xl {
+        padding-top: 5rem;
+    }
+}
+
+.error {
+    grid-area: error;
+}
+
+.text__wrapper {
+    grid-area: text;
+}
+
+.podcast__icons{
+    @include flex(row, space-around, center);
+    width: 90%;
+    margin: auto;
+    padding: 4rem 0;
+    grid-area: icons;
+
+    img {
+        width: 20%;
+
+        @include xl {
+            width: 15%;
+        }
+    }
+
+    @include md {
+        padding: 4rem 0 0 0;
+    }
+}
+
+.form_wrapper {
+    grid-area: form;
+}

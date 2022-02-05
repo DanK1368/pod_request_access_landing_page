@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Chivo", sans-serif;
+}
+
+.heading-1 {
+  font-size: 2.6rem;
+  font-weight: 100;
+  text-align: center;
+  margin: 1rem;
+}
+@media only screen and (min-width: 720px) {
+  .heading-1 {
+    text-align: left;
+    font-size: 4.8em;
+    line-height: 1.2;
+  }
+}
+
+.main-text {
+  font-size: 1.5rem;
+  color: #c2cbe5;
+  font-weight: 100;
+  text-align: center;
+  padding: 2.3rem;
+}
+@media only screen and (min-width: 720px) {
+  .main-text {
+    text-align: left;
+    padding: 0;
+    margin: 3rem 1rem;
+    width: 40ch;
+    line-height: 1.6;
+  }
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
+.primary-color {
+  color: #54e6af;
+}
+
+.input__email {
+  width: clamp(20rem, 100%, 40rem);
+  padding: 1.5rem 2rem;
+  border-radius: 999999px;
+  border-style: none;
+  background: #2c344b;
+  color: #c2cbe5;
+  font-size: 1.3rem;
+}
+.input__email::-moz-placeholder {
+  color: #c2cbe5;
+}
+.input__email:-ms-input-placeholder {
+  color: #c2cbe5;
+}
+.input__email::placeholder {
+  color: #c2cbe5;
+}
+.input__email:focus {
+  outline: 1px solid #54e6af;
+}
+.input__email:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 720px) {
+  .input__email {
+    padding: 1.5rem 17rem 1.5rem 2rem;
+  }
+}
+
+.input__button {
+  width: clamp(20rem, 100%, 40rem);
+  padding: 1.5rem 2rem;
+  border-radius: 999999px;
+  border-style: none;
+  background: #54e6af;
+  font-size: 1.3rem;
+}
+.input__button:hover {
+  cursor: pointer;
+  background: #b3ffb0;
+}
+@media only screen and (min-width: 720px) {
+  .input__button {
+    position: absolute;
+    right: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1rem 2rem;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  min-height: 100vh;
+  max-width: 100%;
+}
+@media only screen and (min-width: 1020px) {
+  .container {
+    position: relative;
+  }
+}
+
+header {
+  grid-column: 1/-1;
+  display: grid;
+  place-content: center;
+}
+@media only screen and (min-width: 0) {
+  header {
+    min-height: 20vh;
+  }
+}
+@media only screen and (min-width: 720px) {
+  header {
+    grid-column: 1/5;
+    place-content: start;
+    padding: 4rem;
+  }
+}
+@media only screen and (min-width: 1020px) {
+  header {
+    grid-column: 2/5;
+    grid-row: 1/3;
+    min-height: initial;
+    align-self: end;
+  }
+}
+
+section {
+  grid-column: 1/-1;
+  width: 95%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 0) {
+  section {
+    min-height: 80vh;
+    padding-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 310px) {
+  section {
+    min-height: 100%;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 720px) {
+  section {
+    grid-column: 1/11;
+    z-index: 2;
+  }
+}
+@media only screen and (min-width: 1020px) {
+  section {
+    grid-column: 2/9;
+    grid-row: 3/4;
+    min-height: initial;
+    align-self: end;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  article {
+    background: #121725;
+    height: 50rem;
+    display: grid;
+    grid-template-areas: "text" "form" "icons";
+  }
+}
+@media only screen and (min-width: 1020px) {
+  article {
+    padding-top: 5rem;
+  }
+}
+
+.error {
+  grid-area: error;
+}
+
+.text__wrapper {
+  grid-area: text;
+}
+
+.podcast__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 4rem 0;
+  grid-area: icons;
+}
+.podcast__icons img {
+  width: 20%;
+}
+@media only screen and (min-width: 1020px) {
+  .podcast__icons img {
+    width: 15%;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .podcast__icons {
+    padding: 4rem 0 0 0;
+  }
+}
+
+.form_wrapper {
+  grid-area: form;
+}
+
+form {
+  position: relative;
+}
+form::after {
+  content: attr(error);
+  height: 15px;
+  width: 200px;
+  position: absolute;
+  padding: 1rem;
+  top: -35px;
+  color: red;
+  font-weight: 700;
+}
+@media only screen and (min-width: 720px) {
+  form::after {
+    top: 50px;
+    margin-top: 10px;
+  }
+}
+
+body {
+  background: #121725;
+}
+@media only screen and (min-width: 1020px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.image__tablet {
+  display: none;
+}
+@media only screen and (min-width: 720px) {
+  .image__tablet {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+@media only screen and (min-width: 1020px) {
+  .image__tablet {
+    display: none;
+  }
+}
+
+.image__desktop {
+  display: none;
+}
+@media only screen and (min-width: 1020px) {
+  .image__desktop {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    grid-column: 3;
+  }
+}
+
+.container {
+  background-color: rgba(18, 23, 37, 0.9);
+  background-image: url(/assets/mobile/image-host.jpg);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+@media only screen and (min-width: 720px) {
+  .container {
+    background-image: none;
+    background-color: #121725;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media only screen and (min-width: 720px) {
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40rem;
+    margin-right: auto;
+    position: relative;
+  }
+}
+
+.bg__container {
+  display: none;
+}
+@media only screen and (min-width: 720px) {
+  .bg__container {
+    display: block;
+    grid-column: 1/-1;
+    position: relative;
+    min-height: 10vh;
+  }
+}
+@media only screen and (min-width: 1020px) {
+  .bg__container {
+    grid-column: 11/-1;
+    grid-row: 4/5;
+  }
+}
+.bg__container__image {
+  position: absolute;
+  left: 30px;
+  bottom: 0px;
+}
+@media only screen and (min-width: 1020px) {
+  .bg__container__image {
+    bottom: 100px;
+    z-index: 5;
+  }
+}/*# sourceMappingURL=main.css.map */

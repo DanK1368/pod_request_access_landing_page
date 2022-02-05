@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+// email validation JS styles
+
+
+form {
+    position: relative;
+
+    &::after {
+        content: attr(error);
+        height: 15px;
+        width: 200px;
+        position: absolute;
+        padding: 1rem;
+        top: -35px;
+        color: red;
+        font-weight: 700;
+
+        @include md {
+            top: 50px;
+            margin-top: 10px;
+        }
+    }
+}

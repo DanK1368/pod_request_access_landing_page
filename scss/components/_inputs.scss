@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+.input__email {
+    width: clamp(20rem, 100%, 40rem);
+    padding: 1.5rem 2rem;
+    border-radius: 999999px;
+    border-style: none;
+    background: $secondary-color;
+    color: $body-text-color;
+    font-size: 1.3rem;
+
+    &::placeholder {
+        color: $body-text-color;
+    }
+
+    &:focus {
+        outline: 1px solid $primary-color;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include md {
+        padding: 1.5rem 17rem 1.5rem 2rem; 
+    }
+}
+
+.input__button {
+    width: clamp(20rem, 100%, 40rem);
+    padding: 1.5rem 2rem;
+    border-radius: 999999px;
+    border-style: none;
+    background: $primary-color;
+    font-size: 1.3rem;
+
+    &:hover {
+        cursor: pointer;
+        background: rgb(179,255,176);
+    }
+
+    @include md {
+        position: absolute;
+        right: 10px;
+        width: fit-content;
+        padding: 1rem 2rem;
+    }
+}

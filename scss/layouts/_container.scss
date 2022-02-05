@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+
+.container {
+    @include grid-12();
+    min-height: 100vh;
+    max-width: 100%;
+
+    @include xl {
+        position: relative;
+    }
+}

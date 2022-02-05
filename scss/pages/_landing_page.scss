@@ -1,0 +1,101 @@
+@use '../abstracts' as *;
+
+body {
+    background: $main-bg-color;
+
+    @include xl {
+        overflow-x: hidden;
+    }
+}
+
+// host image 
+
+.image__tablet {
+    display: none;
+
+    @include md {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    @include xl {
+        display: none;
+    }
+}
+
+.image__desktop {
+    display: none;
+
+    @include xl {
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        grid-column: 3;
+    }
+}
+
+// main container
+
+.container {
+    background-color: $main-bg-color-mobile;
+    background-image: url(/assets/mobile/image-host.jpg);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @include md {
+        background-image: none;
+        background-color: $main-bg-color;
+    }
+}
+
+// main section
+
+form {
+    @include flex(column, center, center);
+    gap: 0.5rem;
+
+    @include md {
+        @include flex(row, flex-start,center);
+        width: 40rem;
+        margin-right: auto;
+        position: relative;
+    }
+}
+
+// dot pattern background
+
+.bg__container {
+    display: none;
+
+    @include md {
+        display: block;
+        grid-column: 1 / -1;
+        position: relative;
+        min-height: 10vh;
+    }
+
+    @include xl {
+        grid-column: 11 / -1;
+        grid-row: 4 / 5;
+    }
+
+    &__image {
+        position: absolute;
+        left: 30px;
+        bottom: 0px;
+
+        @include xl {
+            bottom: 100px;
+            z-index: 5;
+        }
+    }
+    
+}
